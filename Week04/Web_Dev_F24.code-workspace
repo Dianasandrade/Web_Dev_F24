@@ -1,8 +1,15 @@
 {
 	"folders": [
 		{
+			"name": "Web_Dev_F24",
 			"path": ".."
+		},
+		{
+			"name": "Web Dev Images",
+			"path": "../../../Downloads/Web Dev Images"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Web_Dev_F24"
+	}
 }
