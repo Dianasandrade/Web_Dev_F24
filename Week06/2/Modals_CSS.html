@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Modal</title>
+    <style type="text/css">
+        a.button{
+            text-decoration:none;
+            color: white;
+            background-color:blueviolet;
+            padding: 1rem 2rem;
+            border-radius: 0.25rem;
+        }
+
+        /* Modal Styles */
+        .overlay{
+                  /* stretch the overlay div to cover theentire screen */
+            position:fixed;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+              /* transparent */
+              background-color:rgba(red, green, blue, alpha);
+                    /* Make sure our modal shows up in front ofeverything else on screen */
+            z-index:9999;
+                /* starting state opacity at 0% */
+            opacity: 0%;
+                 /* We always define our transitions on the starting state */
+                 transition: opacity 400ms ease-in;
+                       /* our modal is there just 0% opacity, we dont want to be  able to clickon anything in the invisible modal */
+                 pointer-events: none;
+        }
+        .overlay:target{
+            opacity:1;
+                  /* reallow allpointer events */
+            pointer-events:auto;
+        }
+
+        .overlay > div{
+            width:300px;
+            height:300px;
+            background-color:white;
+            position:relative;
+            margin:10% auto;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .close{
+            height:20px;
+            width:20px;
+            background-color:white;
+            color:black;
+                  /* position the close btton on top right corner */
+            position:absolute;
+            top:0;
+            right:0;
+            text-align: center;
+            text-decoration: none;
+            transition:all 1s ease;
+            border-top-right-radius: 10px;
+        }
+
+        .close:hover{
+            background-color:black;
+            color:white;
+        }
+
+        .button_bar{
+            position:absoulte;
+            bottom:0;
+            left:0;
+            right:0;
+            display:flex;
+            
+
+        }
+    </style>
+  </head>
+  <body>
+<h1>Hello Modals</h1>
+<a herf="#info" class="button">Link to Modal 1</a>
+<a herf="#info" class="button">Link to Modal 2</a>
+
+  <!-- Modal 1 -->
+  <!--parent /wrapper div it recieves the ID, and will be our transparent overlay -->
+
+  <div id="info" class="info_modal">
+      <!-- This child div is the modal box itself-->
+       <div>
+          <!--close button, absolutly positioned  to top right corner-->
+          <a href="#close" class="close">X</a>
+            <!-- you can put whatever html elements you need  inside the modal  inner div-->
+        <h2>title of the Modal</h2>
+        <p>Look at me! I am modal number 1</p>
+        <div class="button_bar">
+            <button class="button">Accept</a>
+
+        </div>
+        </div>
+  </div>
+    <!--END Modal 1 -->
+  </body>
+  </html>
+
