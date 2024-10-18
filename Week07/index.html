@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS Data Types</title>
+    <script type="text/javascript">
+      // decalre a variable
+      var myVar;
+      // assign a value to a variable
+      myVar = '20'
+      // decalre and assign all in one statement 
+      var myVar2 = 15
+
+      console.log(myVar)
+      console.log(typeof myVar)
+
+      // javascript will let you do this, watch out!
+      console.log(myVar + myVar2)
+
+      var message = 'Hello'
+      var recipient = 'World'
+      
+      //string concatination 
+
+      console.log(message + recipient)
+
+      //sometimes we want to insert a varibal einside a longer message to display to a user or dveloper
+      console.log("Today\'s temperture in brooklyn is: " + temp + ' degrees F.')
+      const temp2 = 65;
+      //boolean, using const keyword, const requries to aassaign a value immediatly
+      const isOn = true
+      // let is used when a value is going to change based on other conditions, 
+      // or if we need to decalre but not assign a value right away
+      let conditionalMessage
+      // conditional statement
+      if(isOn==true){
+        consitionalMessage = 'The lights are on!'
+      } else {
+        conditionalMessage = 'The lights are off!'
+      }
+
+      //alert(conditionalMessage)
+      const myNun = 80
+      const anotherMessage = `My favorite number is ${myNum}. 
+      So my double favorite number must be ${myNum * 2}!`
+      
+      console.log(anotherMessage)
+
+    </script>
+  </head>
+  <body></body>
+</html>

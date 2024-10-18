@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS Toggle Styles</title>
+    <style>
+        .active{
+            background:#006fff;
+            color:white;
+            font-size:60px;
+        }
+    </style>
+    <script>
+        function toggleActive(){
+            const element= document.getElementById('changeMe')
+            console.log(element)
+        }
+    </script>
+    </head>
+    <body>
+        <h1> Id="changeMe" onclick="toggleActive">
+            This is a heading 1. Click me to change css class and html content!
+        </h1>
+    </body>
+    </html>
