@@ -1,0 +1,44 @@
+
+
+* {
+  margin: 40;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+   background-color: rgba(39, 145, 157, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  margin: 10;
+  padding: 40;
+  background-color: rgb(226, 115, 230);
+}
+
+li {
+  
+  display: inline-block;
+  font-size: 0;
+  width: 110px;
+}
+
+li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  color: chartreuse;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+li a.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
