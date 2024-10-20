@@ -1,9 +1,14 @@
 
 
+.logo{
+  margin-top: 10px;
+  display:inline-block;
+  align-items: center;
+}
 * {
   margin: 40;
-  padding: 0;
-  box-sizing: border-box;
+  padding: 10;
+  box-sizing: 0;
 }
 
 body {
@@ -14,12 +19,14 @@ body {
 ul {
   list-style-type: none;
   margin: 10;
-  padding: 40;
+  padding: 10;
   background-color: rgb(226, 115, 230);
+  border-radius: 25px;
+  text-align: center;
+
 }
 
 li {
-  
   display: inline-block;
   font-size: 0;
   width: 110px;
@@ -41,4 +48,46 @@ li a.active {
 
 li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer {
+  background-color: #c74f9f;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 10px;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer li {
+  display: inline-block;
+  margin: 10px 20px 20px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  margin-bottom: 50px;
+  margin-top: 50px;
+  gap: 2%;
+}
+
+img {
+  margin-right: 10px; /* Space between the image and the paragraph */
+  padding:40px;
+}
+
+
+.footer{
+  border-radius: 25px;
+  font-size: 100;
 }
