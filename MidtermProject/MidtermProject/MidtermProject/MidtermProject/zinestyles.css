@@ -1,86 +1,174 @@
 
 
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
-
-body {
-    height:100vh;
-    display:flex;
-    justify-content: center;
+.logo{
+    margin-top: 10px;
+    display:inline-block;
     align-items: center;
+  }
+  * {
+    margin: 40;
+    padding: 10;
+    box-sizing: 0;
+  }
+  
+  body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: pink;
-}
+     background-color: rgba(39, 145, 157, 0.1);
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 10;
+    background-color: rgb(226, 115, 230);
+    border-radius: 25px;
+    text-align: center;
+  
+  }
+  
+  li {
+    display: inline-block;
+    font-size: 0;
+    width: 110px;
+  }
+  
+  li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: chartreuse;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  li a.active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer {
+    background-color: #c74f9f;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer p {
+    margin: 10px;
+  }
+  
+  .footer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer li {
+    display: inline-block;
+    margin: 10px 20px 20px;
+  }
+
+
 
 /* Book */
-
-.book{
-    border:1px solid black;
-    position:relative;
-    width:350px;
+.book {
+    position: relative;
+    display:inline-block;
+    width: 350px;
     height: 500px;
+    transition: transform 0.5s;
+    align-items: center;
 }
 
-.paper{
-    border:1px solid black;
+.paper {
     position: absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
 }
 
 .front,
-.back{
-    background-color: white;
-    position:absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
+.back {
+    background-color: rgb(226, 115, 230);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+    align-items: center;
 }
 
 .front {
     z-index: 1;
-}
-
-.back{
-    z-index:0;
-}
-
-
-.front-content,
-.back-content{
-    width:100%;
-    height:100%;
-    display:flex;
+    backface-visibility: hidden;
+    border-left: 3px solid black;
     justify-content: center;
+}
+
+.back {
+    z-index: 0;
     align-items: center;
 }
 
-/*Controller Button */
-button{
-    border:none;
-    background-color:transparent;
-    cursor:pointer;
-    margin:10px;
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
 }
 
 button:focus {
-    outline:none;
+    outline: none;
 }
 
 button:hover i {
-    color: pink;
-
+    color: #636363;
 }
 
 i {
-    font-size:50px;
-    color: black;
+    font-size: 50px;
+    color: gray;
+}
 
+/* Paper stack order */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
 }
