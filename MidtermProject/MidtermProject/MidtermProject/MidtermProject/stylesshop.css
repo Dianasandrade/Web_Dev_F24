@@ -91,3 +91,20 @@ img {
   border-radius: 25px;
   font-size: 100;
 }
+
+.container{
+  img{
+    width: 200px;
+    height: 200px;
+  }
+    display:inline-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+    /* some styles so we can see our container */
+    /*border: 1px solid purple;
+    /*background-color: rgba(255, 0, 255, 0.3);
+    min-height: 400px;
+    width: 100%;
+}
