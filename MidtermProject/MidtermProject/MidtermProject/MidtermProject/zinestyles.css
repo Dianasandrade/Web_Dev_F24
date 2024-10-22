@@ -41,10 +41,10 @@ body {
     align-items: center; /* Center items */
   }
 
+  
   img {
-    width: 70%; /* Make image responsive */
-    height:70%;
-    max-width: 100px; /* Limit maximum size */
+    width: 80%; /* Make image responsive */
+    max-width: 300px; /* Limit maximum size */
   }
 }
 
@@ -60,7 +60,7 @@ body {
   }
 
   img {
-    width: 100%; /* Adjust image size for tablets */
+    width: 20%; /* Adjust image size for tablets */
     max-width: 400px; /* Limit maximum size */
   }
 }
@@ -69,10 +69,11 @@ body {
 @media only screen and (min-width: 1025px) {
   /* Default styles apply */
   img {
-    width: 100%; /* Adjust image size for desktops */
+    width: 20%; /* Adjust image size for desktops */
     max-width: 500px; /* Limit maximum size */
   }
 }
+
 
 
 

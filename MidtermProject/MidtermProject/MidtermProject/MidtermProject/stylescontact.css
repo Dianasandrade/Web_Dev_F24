@@ -60,7 +60,7 @@
     }
   
     img {
-      width: 20%; /* Adjust image size for tablets */
+      width: 100%; /* Adjust image size for tablets */
       max-width: 400px; /* Limit maximum size */
     }
   }
