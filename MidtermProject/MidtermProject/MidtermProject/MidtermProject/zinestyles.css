@@ -2,7 +2,7 @@
   margin-top: 8px;
   display: inline-block;
   align-items: center;
-  text-align: center; /* Center the logo */
+  text-align: center; 
 }
 
 * {
@@ -30,49 +30,6 @@ body {
   visibility: hidden;
 }
 
-/* Mobile Styles */
-@media only screen and (max-width: 767px) {
-  body {
-    background-color: blue;
-  }
-
-  .flex-container {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-  }
-
-  
-  img {
-    width: 80%; /* Make image responsive */
-    max-width: 300px; /* Limit maximum size */
-  }
-}
-
-/* Tablet Styles */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    background-color: green;
-  }
-
-  .flex-container {
-    flex-direction: row; /* Align items in a row */
-    align-items: center; /* Center items */
-  }
-
-  img {
-    width: 20%; /* Adjust image size for tablets */
-    max-width: 500px; /* Limit maximum size */
-  }
-}
-
-/* Desktop Styles */
-@media only screen and (min-width: 1025px) {
-  /* Default styles apply */
-  img {
-    width: 20%; /* Adjust image size for desktops */
-    max-width: 500px; /* Limit maximum size */
-  }
-}
 
 /*NAVIGATION BAR*/
 

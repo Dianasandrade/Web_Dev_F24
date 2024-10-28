@@ -1,78 +1,31 @@
-.logo {
-  align-items: center;
-  text-align: center; /* Center the logo */
-}
+/*BODY*/
 
 * {
-  margin: 0; /* Reset margin to avoid overflow */
-  padding: 10px; /* Changed to pixels for proper spacing */
-  box-sizing: border-box; /* Changed to border-box for proper box sizing */
+  margin: 0px;
+  padding: 6px; 
+  box-sizing: border-box; 
+  align-items: center;
 }
 
 body {
   font-family: 'Courier New', Courier, monospace;
-  background-color: rgba(39, 145, 157, 0.1);
-  display: flex; /* Use flexbox for centering */
-  flex-direction: column; /* Align items in a column */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  min-height: 100vh; /* Ensure the body takes full height */
+  flex-direction: column; 
+  align-items: center; 
+  min-height: 100vh; 
 }
 
-.clear-fix:after {
+/*START HEADER*/
+
+header {
   display: flex;
-  clear: both;
-  height: 0;
-  font-size: 0;
-  content: " ";
-  visibility: hidden;
-}
-
-/* Mobile Styles */
-@media only screen and (max-width: 767px) {
-  body {
-    background-color: blue;
-  }
-
-  .flex-container {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-  }
-
+  justify-content: center;
   
-  img {
-    width: 80%; /* Make image responsive */
-    max-width: 300px; /* Limit maximum size */
-  }
 }
 
-/* Tablet Styles */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    background-color: green;
-  }
+/*END HEADER*/
 
-  .flex-container {
-    flex-direction: row; /* Align items in a row */
-    align-items: center; /* Center items */
-  }
-
-  img {
-    width: 20%; /* Adjust image size for tablets */
-    max-width: 400px; /* Limit maximum size */
-  }
-}
-
-/* Desktop Styles */
-@media only screen and (min-width: 1025px) {
-  /* Default styles apply */
-  img {
-    width: 20%; /* Adjust image size for desktops */
-    max-width: 500px; /* Limit maximum size */
-  }
-}
-
-/*NAVIGATION BAR*/
+/*START NAVIGATION BAR*/
+.NavBar
 
 ul {
   list-style-type: none;
@@ -80,8 +33,9 @@ ul {
   padding: 10px;
   background-color: rgb(226, 115, 230);
   border-radius: 25px;
-  text-align: center; /* Center the text in the list */
+  text-align: center; 
 }
+
 
 li {
   display: inline-block;
@@ -99,6 +53,7 @@ li a {
   font-size: 24px;
 }
 
+
 li a.active {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -107,20 +62,19 @@ li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/*NAVIGATION BAR*/
-
+/* END NAVIGATION BAR*/
 
 
 .flex-container {
   display: inline-flex;
   align-items: center; /* Aligns items vertically in the center */
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   gap: 2%;
 
 }
 
-img {
+.item {
   margin-right: 10px; /* Space between the image and the paragraph */
   margin-top:10px;
   padding:20px;
@@ -142,32 +96,63 @@ img {
 
 /*FOOTER*/
 
-/
 
-.footer {
-  background-color: #c74f9f;
-  display:inline-flex;
+footer ul{
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(226, 115, 230);
+  border-radius: 25px;
+  text-align: center; 
+}
+
+footer li {
+display: inline-block;
+font-size: 0;
+width: 110; }
+
+footer li a {
+  display: block;
+  width: 100%;
   text-align: center;
   padding: 10px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  border-radius: 25px;
-  font-size: 90px;
+  color: chartreuse;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+footer li a.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+footer li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 
-.footer p {
-  margin: 10px 20px;
-}
+/* MEDIA QUERIE */
+@media only screen and (max-width: 768px){
+  
+  header{
+    justify-content: center;
+  }
 
-.footer ul {
-  list-style-type: none;
-  padding: 2px;
-}
 
-.footer li {
-  width: 110;
-  text-align: center;
-}
+  ul{
+    display: flex; 
+    flex-direction: column; /
+    width: 100%;
+    font-size: 25px;
+  }
 
+  .container {
+    display:contents;
+    padding:10px;
+    margin:10px;
+  }
+
+
+  footer{
+    width:100%
+    }
+  }
