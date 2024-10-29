@@ -65,18 +65,8 @@ li a:hover {
 /* END NAVIGATION BAR*/
 
 
-.flex-container {
-  display: inline-flex;
-  align-items: center; /* Aligns items vertically in the center */
-  margin-bottom: 20px;
-  margin-top: 20px;
-  gap: 2%;
-
-}
-
 .item {
-  margin-right: 10px; /* Space between the image and the paragraph */
-  margin-top:10px;
+  margin: 10px;
   padding:20px;
 }
 
@@ -86,9 +76,9 @@ li a:hover {
     width: 200px;
     height: 200px;
   }
-    display:inline-block;
-    display: flex;
-    flex-direction: row;
+    display:flex;
+    justify-content: center;
+    flex-direction: wrap;
     flex-wrap: wrap;
     text-align: center;
     color:rgb(193, 5, 165); 
@@ -140,7 +130,7 @@ footer li a:hover {
 
   ul{
     display: flex; 
-    flex-direction: column; /
+    flex-direction: column;
     width: 100%;
     font-size: 25px;
   }
@@ -149,6 +139,11 @@ footer li a:hover {
     display:contents;
     padding:10px;
     margin:10px;
+    font-size: 20px;
+    img{
+      width:100%;
+      height:100%;
+    }
   }
 
 

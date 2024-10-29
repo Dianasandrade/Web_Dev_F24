@@ -8,13 +8,21 @@
     <link rel="stylesheet" href="zinestyles.css" >
     <script src="Zine.js" defer></script>
     <script src="https://kit.fontawesome.com/15859cfe91.js" crossorigin="anonymous"></script>
-</head>
 <body  style="background: rgb(65, 174, 22,50);"> 
-    <img src="Sophie-Web-Logo.jpeg" alt="Sophie Logo" style="width:250px;height: 400px">
   
-  <!--Nav Bar--> 
+  <!-- Start Header-->
+
+<header>
+    <div class="header-image-container">
+    <img src="Sophie-Web-Logo.jpeg" alt="Sophie Logo" style="width:420px;height: 500px">
   
-  <div class="Navbar">
+  </header>
+  
+  <!--End Header-->
+  
+  <!-- STart NavBar-->
+  
+  <div class="NavBar">
     <nav>
       <ul>
         <li><a href="Midterm_project.html">About</a></li>
@@ -24,75 +32,86 @@
       </ul>
     </nav>
   </div>
+  
+  <!-- END NavBar-->
 
-    <!-- Previous Button -->
-    <button id="prev-btn">
-        <i class="fas fa-arrow-circle-left"></i>
-    </button>
+  <button id="prev-btn">
+    <i class="fas fa-arrow-circle-left"></i>
+</button>
 
 
-    <!-- Book -->
-    <div id="book" class="book" class="image-container">
-        <!-- Paper 1 -->
-        <div id="p1" class="paper">
-            <div class="front">
-                <div id="f1" class="front-content">
-                    <img class="cover-img" src="Zine1.jpg" alt="Cover" height="100%" width="100%">
-                </div>
-            </div>
-            <div class="back">
-                <div id="b1" class="back-content">
-                    <img class="cover-img" src="Zine6.jpg" alt="Cover" height="100%" width="100%">
-                </div>
+<!-- The Book -->
+<div id="book" class="book">
+    <!-- Paper 1 -->
+    <div id="p1" class="paper">
+        <div class="front">
+            <div id="f1" class="front-content">
+                <img class="cover-img" src="Zine1.jpg" alt="Cover">
             </div>
         </div>
-
-        <!-- Paper 2 -->
-        <div id="p2" class="paper">
-            <div class="front">
-                <div id="f2" class="front-content">
-                    <img class="cover-img" src="Zine7.jpg" alt="Cover" height="100%" width="100%">
-                </div>
-            </div>
-            <div class="back">
-                <div id="b2" class="back-content">
-                    <img class="cover-img" src="Zine8.jpg" alt="Cover" height="100%" width="100%">
-                </div>
-            </div>
-        </div>
-        <!-- Paper 3 -->
-        <div id="p3" class="paper">
-            <div class="front">
-                <div id="f3" class="front-content">
-                    <img class="cover-img" src="Zine9.jpg" alt="Cover" height="100%" width="100%">
-                </div>
-            </div>
-            <div class="back">
-                <div id="b3" class="back-content">
-                    <img class="cover-img" src="Zine10.jpg" alt="Cover" height="100%" width="100%">
+        <div class="back">
+            <div id="b1" class="back-content">
+                <img class="page2" src="Zine4.jpg" alt="Page2">
+                <div class="content">
+                   
                 </div>
             </div>
         </div>
     </div>
+    <!-- Paper 2 -->
+    <div id="p2" class="paper">
+        <div class="front">
+            <div id="f2" class="front-content">
+                <img class="cover-img" src="Zine5.jpg" alt="Cover">
+            </div>
+        </div>
+        <div class="back">
+            <div id="b2" class="back-content">
+                <img class="cover-img" src="Zine6.jpg" alt="Cover">
+            </div>
+        </div>
+    </div>
 
-    <!-- Next Button -->
-    <button id="next-btn">
-        <i class="fas fa-arrow-circle-right"></i>
-    </button>
+    
+    <!-- Paper 3 -->
+    <div id="p3" class="paper">
+        <div class="front">
+            <div id="f3" class="front-content">
+                <img class="cover-img" src="Zine7.jpg" alt="Cover">
 
-  <!--Footer-->
+            </div>
+        </div>
+        <div class="back">
+            <div id="b3" class="back-content">
+                <img class="cover-img" src="Zine8.jpg" alt="Cover">
+            </div>
+        </div>
+    </div>
+</div>
+
+<button id="next-btn">
+    <i class="fas fa-arrow-circle-right"></i>
+</button>
 
 
-<div class="footer">
-    <ul>
-        <li><a href="#Instagram">Instagram</a></li>
-        <li><a href="#Twitter">Twitter</a></li>
-        <li><a href="#Pinterest">Pinterest</a></li>
-    </ul>
-    <p>&copy; 2024 Sophie. All rights reserved.</p>
-  </div>
-  
-  
-  <!--Footer-->
-</body>
-</html>
+    <!--Footer-->
+
+
+
+<footer>
+    <div class="footer">
+      <ul>
+          <li><a href="#Instagram">Instagram</a></li>
+          <li><a href="#Twitter">Twitter</a></li>
+          <li><a href="#Pinterest">Pinterest</a></li>
+      </ul>
+    </div>
+    
+    <p> &copy; 2024 Sophie. All rights reserved.</p>
+    </footer>
+    
+    <!--Footer-->
+    
+    
+      </body>
+    </html>

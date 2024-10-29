@@ -1,152 +1,143 @@
-.header-image-container {
+
+/*BODY*/
+
+* {
+  margin: 0px;
+  padding: 6px; 
+  box-sizing: border-box; 
+  align-items: center;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  flex-direction: column; 
+  align-items: center; 
+  min-height: 100vh; 
+}
+
+/*HEADER*/
+
+header {
   display: flex;
   justify-content: center;
-  max-width: 100%;
+  
 }
-.header-image {
-  display:flex;
-}
-  
-  * {
-    margin: 0; 
-    padding: 10px; 
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgba(39, 145, 157, 0.1);
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    min-height: 100vh; 
-  }
-  
-  .clear-fix:after {
-    display: flex;
-    clear: both;
-    height: 0;
-    font-size: 0;
-    content: " ";
-    visibility: hidden;
-  }
-  
-  /* Mobile Styles */
-  @media only screen and (max-width: 767px) {
-    body {
-      background-color: blue;
-    }
-  
-    .flex-container {
-      flex-direction: column;
-      align-items: center; 
-    }
-  
-  }
-  
-  /* Tablet Styles */
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    body {
-      background-color: green;
-    }
-  
-    .flex-container {
-      flex-direction: row; 
-      align-items: center; 
-    }
-  
-    img {
-      width: 100%; /* Adjust image size for tablets */
-      max-width: 400px; /* Limit maximum size */
-    }
-  }
-  
-  /* Desktop Styles */
-  @media only screen and (min-width: 1025px) {
-    /* Default styles apply */
-    img {
-      width: 20%; /* Adjust image size for desktops */
-      max-width: 500px; /* Limit maximum size */
-    }
-  }
-  
-  /*NAVIGATION BAR*/
 
-  ul {
-    list-style-type: none;
-    margin: 10px;
-    padding: 10px;
-    background-color: rgb(226, 115, 230);
-    border-radius: 25px;
-    text-align: center; /* Center the text in the list */
-  }
-  
-  li {
-    display: inline-block;
-    font-size: 0;
-    width: 110;
-  }
-  
-  li a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    color: chartreuse;
-    text-decoration: none;
-    font-size: 24px;
-  }
-  
-  li a.active {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-  
-  li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
+
 /*NAVIGATION BAR*/
+.NavBar
+
+ul {
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(226, 115, 230);
+  border-radius: 25px;
+  text-align: center; 
+}
+
+li {
+  display: inline-block;
+  font-size: 0;
+  width: 110;
+}
+
+li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  color: chartreuse;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+li a.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
   
 
 .form{
-    display:inline-block;
+    display:block;
     padding:30px;
-    align-items: left;
+    align-items: center;
+
+
 }
 
 
 /*FOOTER*/
 
-/
 
-.footer {
-  background-color: #c74f9f;
-  display:inline-flex;
+footer ul{
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(226, 115, 230);
+  border-radius: 25px;
+  text-align: center; 
+}
+
+footer li {
+display: inline-block;
+font-size: 0;
+width: 110; }
+
+footer li a {
+  display: block;
+  width: 100%;
   text-align: center;
   padding: 10px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  border-radius: 25px;
-  font-size: 90px;
+  color: chartreuse;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+footer li a.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+footer li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 
-.footer p {
-  margin: 10px 20px;
+/* MEDIA QUERIE */
+@media only screen and (max-width: 768px){
+  
+  header{
+    justify-content: center;
+  }
+
+  ul{
+    display: flex; 
+    flex-direction: column; /
+    width: 100%;
+    font-size: 25px;
+  }
+
+
+.fieldset{
+width: 100%;
+height:100%;
+  
 }
 
-.footer ul {
-  list-style-type: none;
-  padding: 2px;
-}
+    footer ul{
+      display: flex; 
+      flex-direction: column; /
+      width: 100%;
+      font-size: 25px;
+      
+    }
 
-.footer li {
-    width: 110;
-  text-align: center;
+  footer{
+    width:100%
+    }
 }
-
-/*FOOTER*/
 
