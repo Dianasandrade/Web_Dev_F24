@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Math Methods</title>
+    
+<head>
+
+<script type="text/javascript">
+    //intergers =whole numbers
+    const x = 15
+    const y = 35 
+    let z 
+    z=10.5 // float
+
+    //adition +
+    console.log(x+y)
+    //subtraction -
+    console.log(x-y)
+    //multiplication
+    console.log(x*y)
+    //division
+    console.log(x/y)
+    //modular operator % returns the division remainder
+    // this is really helpful when we want to use odd or even or every 
+    console.log(10%3)
+
+    //just like algebra, order of operations matters
+    console.log(x+y) * (y-1)
+
+    //increments
+   // x++
+
+   //decrement
+   //x--
+
+   //increment by a certain number 
+   //x+ =2
+
+   //decerment by a certain number 
+   //x--
+
+
+   //floating point numbers and some basic math methods
+   var k=2.25
+    //Math.floor(num) this will ALWAYS round down 
+    console.log('floor k result=' Math.floor(k))
+
+    //Math.ceil(num) this will ALWAYS round up
+    console.log('ciel k result =', Math.ciel(k))
+
+    // Math.round(num) will round up or down based on the decmial value
+    var num1 =2.2
+    var num2 = 2.7
+    console.log('round num1 result=' Math.round(num1))
+    console.log('round num2 result=' Math.round(num2))
+
+    //Math.random() returns a floating point nnumber BETWEEN 0 and 1 
+    console.log(math.random())
+
+    //We can use Math.random in combination with Math.round() to get the w-
+    //for true/false boolean situation 
+
+    var yn = Math.random(Math.random()) // return 0 or 1 
+    console.log(yn)
+
+    if (yn===0){
+      console.log('false')
+    } else{
+
+      console.log('true')
+    }
+
+    //helper function; Returns a random number between 0 and n
+    function randNum(max){
+      //when we decale a variable inside a function
+      //it is scoped. aka not not accesible outside this funciton
+      var rn = Math.round( max * math.random()) 
+      //console.log(rn)
+      return rn 
+    }
+
+    //this helper function is super helpful when you need to pick a random index from an array
+    var q = randNum(34)
+    console.log(q)
+
+    //tets is a global varibale but it gets a value assigned when we call 
+    var test 
+
+    function randNumRange(min,max){
+      var rn = Math.round(Math.round * (max - min) +min)
+    }
+
+    var rand1 = randNumRange(20,30)
+    var rand2 = randNumRange(55,177)
+
+    console.log(rand1,rand2)
+
+  
+    
+
+
+</script>
+
+</head>
+<body></body>
+</html>
