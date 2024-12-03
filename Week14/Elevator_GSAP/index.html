@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elevator Scrolling Example</title>
+    <style type="text/css" media="screen">
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin:40px 0;
+            padding-top: 100px;
+            background-color: black;
+            color:white;
+        }
+
+        #main{
+            margin: 0 auto;
+            width:800px;
+        }
+
+        section{
+            padding:20px 0 80px 0;
+            height: 1000px;
+        }
+
+        section h2{
+            font-size:48px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 20px;
+        }
+
+        ul{
+            position:fixed;
+            top:40%;
+            right:0;
+            list-style-type:none;
+        }
+
+        li{
+            width:30px;
+            padding:10px;
+            margin-bottom:1px;
+            color:#ccc;
+            border-left: 10px solid #333;
+            cursor: pointer;
+            transition: all 1s;
+        }
+
+        .actie{
+            color: #fff;
+            border-left: 20px solid #fff;
+            line-height:30px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <!-- elevator buttons -->
+     <ul>
+        <li id="floor5btn">5</li>
+        <li id="floor4btn">4</li>
+        <li id="floor3btn">3</li>
+        <li id="floor2btn">2</li>
+        <li id="floor1btn">1</li>
+     </ul>
+    <!-- floors -->
+     <div id="main">
+        <sections id="floor5Panel">
+        <h2>Floor 5</h2>
+        </sections>
+
+        <sections id="floor4Panel">
+            <h2>Floor 4</h2>
+            </sections>
+
+            <sections id="floor3Panel">
+                <h2>Floor 3</h2>
+                </sections>
+
+                <sections id="floor2Panel">
+                    <h2>Floor 2</h2>
+                    </sections>
+
+                    <sections id="floor1Panel">
+                        <h2>Floor 1</h2>
+                        </sections>
+     </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript">
+        //wait for the DOM content to load before we assign elements to variables, and add other event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            //make all of our content fade in on load
+            gsap.from('body', 1, {opacity: 0})
+            //make our elevator buttons slide in from the right
+            gsap.from('ul', 1, {right:-500, delay:0.5})
+
+            //grab each elevator button bu its ID and store each one as a seperate varibale 
+            const floor1Btn = document.getElementById('floor1Btn')
+            const floor2Btn = document.getElementById('floor2Btn')
+            const floor3Btn = document.getElementById('floor3Btn')
+            const floor4Btn = document.getElementById('floor4Btn')
+            const floor5Btn = document.getElementById('floor5Btn')
+
+            // also grab our Lis as an array as well
+            let navButtons = document.getElementsByTagName('LI')
+
+            // why does this look insane and redundant? because it is not an array, but an html collectioni
+            console.log(navButtons)
+            //cast the collection into an array so we have access to all the array methods
+            navButtons = [].slice.call(navButtons)
+            //console.log(navButtons)
+
+            //add the active class  on mouseEnter
+            navButtons.forEach((button) => {
+                button.addEventListener('mouseenter', () =>{
+                    gsap.to(this, {className: 'active', duration: 1 })
+                })
+            })
+
+            //remove the active class on mouseleave
+            navButtons.forEach((button) => {
+                button.addEventListener('mouseleave', () =>{
+                    gsap.to(this, {className: '', duration: 1 })
+                })
+            })
+
+            // find and set the scroll  position of the top of each floor
+            console.log(documennt.querySelector('#floor1Panel').getBoundingClientRect())
+        })
+
+
+    </script>
+  </body>
+</html>
